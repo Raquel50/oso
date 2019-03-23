@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Sabado 23</title>
+    <style type="text/css">
+      canvas{
+        background: #dfe6e9;
+        display: block;
+        margin: 0 auto;
+        padding: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" height="400" width="500"></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById("canvas");
+      var context = canvas.getContext("2d");
+
+      dibujarBola(250, 260, 100, "#55efc4");
+      dibujarBola(180, 180, 55, "#00b894");
+      dibujarBola(320, 180, 55, "#00b894");
+      dibujarBola(210, 260, 20, "#74b9ff");
+      dibujarBola(275, 260, 20, "#74b9ff");
+      dibujarBola(210, 260, 5, "#fd79a8");
+      dibujarBola(275, 260, 5, "#fd79a8");
+      dibujarBola(242, 280, 7, "#fd79a8");
+      dibujarBola(245, 310, 15, "#fd79a8");
+
+
+      function dibujarBola(x, y, radius, color) {
+        context.beginPath();
+        context.arc(x, y, radius, 0, Math.PI*2, true);
+        context.fillStyle = color;
+        context.fill();
+        context.closePath();
+      }
+    </script>
+  </body>
+</html>
